@@ -1,0 +1,541 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@300;400;500&display=swap');
+$fontFamily : 'Inter', sans-serif;
+$fontFamilyRed : 'Red Hat Display', sans-serif;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+:root{
+    --text-nav : #16171C;
+    --banner-text-span : #34B3FF;
+    --text-banner-small : #494C57;
+    --text-form : #494C57;
+    --button-green : #00B67A;
+    --button-white : #00B67A;
+    --footer-bg: #313E60;
+}
+.container{
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    overflow-x: hidden;
+    .btn{
+        padding: 5px;
+        border-radius: 5px;
+        position: fixed;
+        bottom: 20px;
+        right: -50%;
+        background-color: var(--text-nav);
+        z-index: 200;
+        transition: 0.5s;
+        cursor: pointer;
+        i{
+            color: #fff;
+        }
+    }
+    .btn.scrollBtn{
+        right: 20px;
+        transition: 0.5s;
+    }
+    header{
+        width: 100%;
+        top: 0;
+        position: absolute;
+        transition: 0.5s;
+        z-index: 100;
+        padding: 2%;
+        .container__header{
+            max-width: 1200px;
+            margin: 0px auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            nav.givmoney{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: 900px;
+                ul.list__givmoney{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    list-style-type: none;
+                    list-style-position: inside;
+                    li.list__item__givmoney{
+                        padding: 5px 10px;
+                        margin: 5px 5px;
+                        a.list__link__givmoney{
+                            font-family: $fontFamily;
+                            text-decoration: none;
+                            color: var(--text-nav);
+                        }
+                    }
+                    li.list__item__givmoney.active{
+                        a{
+                            font-weight: 600;
+                            color: #000;
+                        }
+                    }
+                }
+                .btn__header{
+                    button.btn__header{
+                        display: inline-block;
+                        padding: 10px 30px;
+                        outline: none;
+                        border: none;
+                        border-radius: 5px;
+                        cursor: pointer;
+                        font-family: $fontFamily;
+                        color: #518CFF;
+                        background-color: #fff;
+                    }
+                    button.btn__header.noBg{
+                        background-color: unset;
+                        color: #fff;
+                    }
+                }
+            }
+        }
+    }
+    header.headerSticky{
+        width: 100%;
+        background-color: #FAFAFD;
+        position: fixed;
+        top: 0;
+        padding: 1.5%;
+        transition: 0.5s;
+        box-shadow: 2px 5px 10px rgba(0,0,0,0.19);
+        .container__header{
+            nav.givmoney{
+                .btn__header{
+                    button.btn__header.noBg{
+                        color: #000;
+                    }
+                }
+            }
+        }
+    }
+    section.banner__givmoney{
+        width: 100%;
+        height: 100%;
+        position: relative;
+        background: url('../images/svg__banner__bg.png');
+        background-repeat: no-repeat;
+        background-size :auto;
+        background-position-x: 900px;
+        background-position-y: -200px;
+        .container__banner__givmoney{
+            max-width: 1200px;
+            margin: 0px auto;
+            padding: 150px 0px;
+            .row__banner__givmoney{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                .box__banner__givmoney{
+                    width: 500px;
+                    h1{
+                        color: var(--text-nav);
+                        font-size: 50px;
+                        margin: 20px 0px;
+                        font-family: $fontFamilyRed;
+                        span{
+                            color: var(--banner-text-span);
+                        }
+                    }
+                    h3{
+                        font-family: $fontFamilyRed;
+                        color: var(--text-banner-small);
+                        font-weight: normal;
+                        line-height: 1.5;
+                    }
+                    .check{
+                        width:auto;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: baseline;
+                        flex-wrap: wrap;
+                        margin: 30px 0px;
+                        .check__inside{
+                            width: 200px;
+                            margin: 10px 0px;
+                            img{
+                                display: inline-block;
+                                vertical-align: middle;
+                            }
+                            span{
+                                color: var(--text-banner-small);
+                                font-family: $fontFamilyRed;
+                            }
+                        }
+                    }
+                }
+                .box__form{
+                    width: 400px;
+                    border-radius: 10px;
+                    background-color: #fff;
+                    font-family: $fontFamily;
+                    box-shadow: 2px 5px 10px rgba(0,0,0,0.19);
+                    form{
+                        width: 100%;
+                        padding: 20px;
+                        .input__group{
+                            margin: 20px 0px;
+                            label{
+                                display: block;
+                                margin: 10px 0px;
+                            }
+                            input[type="text"],
+                            input[type="password"]{
+                                display: block;
+                                width: 100%;
+                                padding: 15px 7px;
+                                outline: none;
+                                border: none;
+                                background-color: #F8F8FC;
+                                color: #989DB1;
+                                border-radius: 10px;
+                                font-size: 15px;
+                            }
+                            .select{
+                                width: 100%;
+                                display: flex;
+                                position: relative;
+                                justify-content: space-between;
+                                align-items: center;
+                                background-color: #F8F8FC;
+                                border-radius: 10px;
+                                select{
+                                    border-radius: 10px;
+                                    display: inline-block;
+                                    width: 100%;
+                                    font-family: $fontFamily;
+                                    outline: none;
+                                    border: none;
+                                    background-color: #F8F8FC;
+                                    font-size: 15px;
+                                    color: #989DB1;
+                                    padding: 15px;
+                                }
+                            }
+                        }
+                        button.form{
+                            display: block;
+                            width: 100%;
+                            padding: 20px;
+                            background-color: var(--button-green);
+                            outline: none;
+                            margin-top: 20px;
+                            border: none;
+                            font-family: $fontFamily;
+                            color: #fff;
+                            border-radius: 10px;
+                            cursor: pointer;
+                        }
+                        .note{
+                           width: 100%;
+                           margin-top: 20px;
+                           img{
+                               margin-top: 5px;
+                               vertical-align: middle;
+                               display: inline-block;
+                           }
+                           .text__note{
+                               display: inline-flex;
+                               width: 90%;
+                               span{
+                                   font-size: 14px;
+                                   color: #8D8F98;
+                                   line-height: 1.5;
+                               }
+                           }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    section.sponsor__logo{
+        padding: 50px 0px;
+        position: relative;
+        background-color: #FCF9FE;
+        .container__sponsor__logo{
+            max-width: 1200px;
+            margin: 0px auto;
+            .row__sponsor__logo{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+        }
+    }
+    section.Advantages__givmoney{
+        padding: 100px 0px;
+        position: relative;
+        .container__Advantages__givmoney{
+            max-width: 1200px;
+            margin: 0px auto;
+            h1{
+                font-family: $fontFamilyRed;
+                font-size: 45px;
+                text-align: center;
+                span{
+                    color: var(--banner-text-span);
+                }
+            }
+            .row__Advantages__givmoney{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-top: 5%;
+                .box__Advantages__givmoney{
+                    width: 320px;
+                    height: auto;
+                    padding: 20px;
+                    font-family: $fontFamily;
+                    h3{
+                        margin: 10px 0px;
+                        color: var(--text-nav);
+                    }
+                    span{
+                        color: var(--text-form);
+                        line-height: 1.5;
+                    }
+                }
+            }
+        }
+    }
+    section.price__givmoney{
+        padding: 100px 0px;
+        position: relative;
+        background-color: #FAFAFD;
+        background-image: url('../images/Ornament.png');
+        background-repeat: no-repeat;
+        background-size: calc(150px - 20px);
+        background-position: top right;
+        .container__price__givmoney{
+            max-width: 1200px;
+            margin: 0px auto;
+           .title__price{
+               margin: 0px auto;
+               width: 600px;
+               h1{
+                   font-family: $fontFamilyRed;
+                   text-align: center;
+                   font-size: 45px;
+                   span{
+                       color: var(--banner-text-span);
+                   }
+               }
+               p{
+                   text-align: center;
+                   margin: 10px 0px;
+                   color: #494C57;
+                   font-family: $fontFamily;
+                   line-height: 1.5;
+               }
+           }
+           .row__price__givmoney{
+               display: flex;
+               justify-content :space-evenly;
+               align-items: center;
+               margin-top: 5%;
+               .box__price{
+                   width: 350px;
+                   height: auto;
+                   border-radius: 10px;
+                   text-align: center;
+                   font-family: $fontFamily;
+                   padding: 35px 15px;
+                   background-color: #fff;
+                   h2{
+                       font-family: $fontFamily;
+                       color: var(--text-nav);
+                   }
+                   h1{
+                       margin-top: 30px;
+                       font-size: 30px;
+                       span{
+                           font-size: 14px;
+                       }
+                   }
+                   p{
+                       margin: 10px;
+                       line-height: 1.5;
+                       color: #8D8F98;
+                       span{
+                           color: var(--banner-text-span);
+                       }
+                   }
+                   ul{
+                       margin-top: 20px;
+                       text-align: left;
+                       li{
+                           list-style-position: inside;
+                           list-style-type: none;
+                           color: #494C57;
+                           img{
+                               display: inline-block;
+                               vertical-align: middle;
+                               margin: 10px 10px;
+                            }
+                        }
+                   }
+                   button.price1{
+                       display: block;
+                       width: 100%;
+                       margin-top: 40px;
+                       padding: 15px;
+                       font-family: $fontFamily;
+                       outline: none;
+                       border: none;
+                       color: #494C57;
+                       border-radius: 10px;
+                       cursor: pointer;
+                      background-color: #FAFAFD;
+                   }
+               }
+               .box__price.popular{
+                   .note__price{
+                       width: 150px;
+                       height: auto;
+                       position: absolute;
+                       top: -10px;
+                       left: 50%;
+                       border-radius: 5px;
+                       transform: translateX(-50%);
+                       background-color: #F2FF57;
+                       padding: 5px;
+                       span{
+                           font-weight: 600;
+                           color: #494C57;
+                       }
+                   }
+                   h2{
+                       color: #fff;
+                   }
+                   background-color: #518CFF;
+                   color: #fff;
+                   position: relative;
+                   p{
+                       color: #CCE3FF;
+                       span{
+                           color: #CCE3FF;
+                       }
+                   }
+                   ul{
+                       li{
+                           color: #fff;
+                       }
+                   }
+                   button.price1{
+                       background-color:#00B67A;
+                       color: #fff;
+                   }
+               }
+           }
+        }
+    }
+    section.contact__givmoney{
+        padding: 100px 0px;
+        position: relative;
+        background-image: url('../images/Ornament__contact.png');
+        background-repeat: no-repeat;
+        background-size: calc(150px - 20px);
+        .container__contact__givmoney{
+            max-width: 1200px;
+            margin: 0px auto;
+            .row__contact__givmoney{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                .box__contact{
+                    max-width: 600px;
+                    height: auto;
+                    text-align: center;
+                    h1{
+                        font-family: $fontFamilyRed;
+                        color: var(--text-nav);
+                        font-size: 45px;
+                    }
+                    .btn__contact{
+                        button.btn__contact{
+                            display: inline-block;
+                            margin: 50px 10px;
+                            outline: none;
+                            padding: 10px 30px;
+                            border: none;
+                            border-radius: 10px;
+                            color: #fff;
+                            font-family: $fontFamily;
+                            cursor: pointer;
+                            background-color: #00B67A;
+                        }
+                        button.btn__contact.noBg{
+                            background-color: unset;
+                            border: 1px solid #8D8F98;
+                            color: var(--text-nav);
+                        }
+                    }
+                }
+            }
+        }
+    }
+    footer{
+        padding: 50px 0px;
+        position: relative;
+        background-color: var(--footer-bg);
+        .container__footer{
+            max-width: 1200px;
+            margin: 0px auto;
+            .row__footer{
+                display: flex;
+                justify-content: space-between;
+                align-items: stretch;
+                .box__footer{
+                    width: 200px;
+                    .rating{
+                        margin-top: 20px;
+                        i{
+                            font-size: 20px;
+                            margin-right: 15px;
+                            display: inline-block;
+                            color: #FAFAFD;
+                        }
+                    }
+                    p{
+                        font-family: $fontFamilyRed;
+                        color: #FAFAFD;
+                        margin-top: 15px;
+                        font-size: 14px;
+                    }
+                }
+                .container__box__list__footer{
+                    width: 700px;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    .box__list__footer{
+                        font-family: $fontFamilyRed;
+                        color: #FAFAFD;
+                        ul{
+                            list-style-type: none;
+                            list-style-position: inside;
+                            li{
+                                margin: 5px 0px;
+                                padding: 5px 0px;
+                                a{
+                                    text-decoration: none;
+                                    color: #FAFAFD;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,192 @@
+@media screen and (max-width: 1024px) {
+  .container {
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    overflow-x: hidden;
+  }
+  .container header {
+    width: 100%;
+  }
+  .container header .container__header {
+    width: 100%;
+  }
+  .container header .container__header nav.givmoney {
+    max-width: 800px;
+  }
+  .container section.banner__givmoney {
+    width: 100%;
+    height: 100%;
+    background-position-x: 600px;
+  }
+  .container section.banner__givmoney .container__banner__givmoney {
+    width: 100%;
+    padding: 100px 10px;
+  }
+  .container section.sponsor__logo {
+    padding: 50px 10px;
+  }
+  .container section.sponsor__logo .container__sponsor__logo {
+    width: 100%;
+  }
+  .container footer {
+    padding: 50px 10px;
+  }
+  .container footer .container__footer {
+    width: 100%;
+  }
+  .container footer .container__footer .row__footer .container__box__list__footer {
+    max-width: 600px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    width: 100%;
+    position: relative;
+    overflow-x: hidden;
+    min-height: 100%;
+  }
+  .container header {
+    width: 100%;
+  }
+  .container header .container__header {
+    width: 100%;
+  }
+  .container header .container__header .hamburger {
+    width: 30px;
+    height: 20px;
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    z-index: 300;
+    cursor: pointer;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .container header .container__header .hamburger span.bar {
+    width: 100%;
+    height: 3px;
+    border-radius: 5px;
+    background-color: #000;
+  }
+  .container header .container__header nav.givmoney {
+    position: fixed;
+    top: 0;
+    width: 0;
+    right: -100%;
+    padding: 20px 0px;
+    min-height: 50vh;
+    overflow-x: hidden;
+    background-color: #FAFAFD;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.19);
+            box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.19);
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+  }
+  .container header .container__header nav.givmoney ul.list__givmoney {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-top: 50px;
+  }
+  .container header .container__header nav.givmoney ul.list__givmoney li.list__item__givmoney {
+    padding: 10px 0px;
+    margin: 15px 0px;
+  }
+  .container header .container__header nav.givmoney .btn__header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .container header .container__header nav.givmoney .btn__header button.btn__header {
+    margin: 20px 0px;
+  }
+  .container header .container__header nav.givmoney.navShow {
+    width: 100%;
+    right: 0;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+  }
+  .container section.banner__givmoney {
+    width: 100%;
+    height: 100%;
+  }
+  .container section.banner__givmoney .container__banner__givmoney {
+    width: 100%;
+    padding: 80px 10px;
+  }
+  .container section.sponsor__logo {
+    padding: 50px 10px;
+  }
+  .container section.sponsor__logo .container__sponsor__logo {
+    width: 100%;
+  }
+  .container section.sponsor__logo .container__sponsor__logo .row__sponsor__logo {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .container section.sponsor__logo .container__sponsor__logo .row__sponsor__logo img {
+    width: 300px;
+    margin: 20px 0px;
+  }
+  .container section.Advantages__givmoney {
+    padding: 50px 10px;
+  }
+  .container section.Advantages__givmoney .container__Advantages__givmoney {
+    width: 100%;
+  }
+  .container section.Advantages__givmoney .container__Advantages__givmoney .row__Advantages__givmoney {
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
+  }
+  .container section.price__givmoney {
+    padding: 50px 10px;
+  }
+  .container section.price__givmoney .container__price__givmoney {
+    width: 100%;
+  }
+  .container section.price__givmoney .container__price__givmoney .row__price__givmoney {
+    margin-top: 8%;
+  }
+  .container section.contact__givmoney {
+    padding: 50px 10px;
+  }
+  .container section.contact__givmoney .container__contact__givmoney {
+    width: 100%;
+  }
+  .container footer {
+    padding: 50px 10px;
+  }
+  .container footer .container__footer {
+    width: 100%;
+  }
+  .container footer .container__footer .row__footer .container__box__list__footer {
+    max-width: 500px;
+  }
+}
+/*# sourceMappingURL=responsive.css.map */
